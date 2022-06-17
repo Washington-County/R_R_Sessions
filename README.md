@@ -1,15 +1,16 @@
-Analysis-template
-# Name of Project
-#### Author
-#### Created
-#### Title
+# R&R Sessions
+#### Ryan Ames
+#### June, 2022
 
 ## About the Project/Analysis
-Add information here about why this project was done, who requested it, and how the results will be used
+This is a hub for the R learning sessions. It is intended to contain resources, examples, and workshop material that is covered by the group learning R together.
 
 ## Contents
-Add a description of what each folder has (?)
-Scripts: include generic relative path and direct path SAS scripts.
+Description of what each folder has:
+1. scripts: includes the core scripts to run the project. Also includes things like generic relative path and direct path SAS scripts.
+2. data: contains the data inputs that the core scripts read in.
+3. snippets: contains code that is currently being tried out (e.g. new packages, experimental functionality, etc.)
+4. outputs: Contains processed data products (exports, reports, dashboards, etc.)
 
 ## Getting started
 Outline the information an analys would need in order to successfully run your script/analysis.
