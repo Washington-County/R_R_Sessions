@@ -1,0 +1,84 @@
+---
+title: "Session 1: Rmarkdown"
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    theme: spacelab
+---
+
+```{r, setup, include=FALSE}
+## This code chunk establishes report options such as suppressing warning messages when executing code and establishing the default size for figures/plots/tables
+
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      error = TRUE,
+                      fig.width = 10, 
+                      fig.height = 6
+                      ) 
+
+```
+
+```{r, source_data, include = FALSE}
+#source(here::here("scripts", "utilities.R"))
+#source(here::here("scripts", "functions.R"))
+#source(here::here("scripts", "get_data.R"))
+#source(here::here("scripts", "process_data.R"))
+```
+
+## About this report
+
+This report is intended to be an example of how to build an Rmarkdown report. It will explore different options and features of Rmarkdown.
+
+
+* This report was last run on `r today()`  
+
+* It contains air quality data from as recent as `r max(airquality[["Month"]])` *(Month)*
+
+* It contains `r nrow(airquality)` records.
+
+</br>
+
+### Tables
+
+
+#### Static Table
+
+```{r, include = TRUE}
+iris %>% 
+  tabyl(Species)
+```
+
+
+### Custom Table
+```{r, include = TRUE}
+iris %>% 
+  my_table(Species)
+```
+
+</br>
+
+#### Dynamic Table
+```{r, include = TRUE}
+ iris %>% 
+  select(Species, Sepal.Length, Sepal.Width) %>% 
+  arrange(desc(Sepal.Length)) %>% 
+  DT::datatable(rownames= FALSE)
+```
+
+</br>
+
+### Plots
+
+</br>
+
+
+## APPENDIX
+
+### Resources
+
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target - "_blank"}
+* [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook){target - "_blank"}
+* [Interactive Documents](https://garrettgman.github.io/rmarkdown/authoring_shiny.html#overview){target - "_blank"}
+* [R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/){target - "_blank"}
