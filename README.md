@@ -7,16 +7,16 @@ This is a hub for the R learning sessions. It is intended to contain resources, 
 
 ## Contents
 Description of what each folder has:
-1. scripts: includes the core scripts to run the project. Also includes things like generic relative path and direct path SAS scripts.
-2. data: contains the data inputs that the core scripts read in.
-3. snippets: contains code that is currently being tried out (e.g. new packages, experimental functionality, etc.)
+1. scripts: includes the core scripts to run the project. 
+2. snippets: contains code that is currently being tried out (e.g. new packages, experimental functionality, etc.)
+3. data: contains the data inputs that the core scripts read in.
 4. outputs: Contains processed data products (exports, reports, dashboards, etc.)
 
 ## Getting started
 Outline the information an analys would need in order to successfully run your script/analysis.
 
 ### Prerequisities
-Information about the software needed (e.g., R, SAS)
+Information about the software needed (e.g., R)
 
 ### Documentation and Procedure
 Where that can be foudn for future reference
