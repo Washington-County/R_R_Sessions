@@ -47,7 +47,7 @@ This report is intended to be an example of how to build an Rmarkdown report. It
 
 ```{r, include = TRUE}
 iris %>% 
-  tabyl(Species)
+  janitor::tabyl(Species)
 ```
 
 
@@ -118,8 +118,8 @@ plot_ly(iris, x=iris$Petal.Length, y=iris$Sepal.Length,
 
 ### Resources
 
-* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target = "_blank"}
-* [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook){target = "_blank"}
-* [Interactive Documents](https://garrettgman.github.io/rmarkdown/authoring_shiny.html#overview){target - "_blank"}
-* [Plotly-R](https://plotly-r.com/){target = "_blank"}
-* [R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/){target = "_blank"}
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank"}
+* [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook){target="_blank"}
+* [Interactive Documents](https://garrettgman.github.io/rmarkdown/authoring_shiny.html#overview){target="_blank"}
+* [Plotly-R](https://plotly-r.com/){target="_blank"}
+* [R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/){target="_blank"}
