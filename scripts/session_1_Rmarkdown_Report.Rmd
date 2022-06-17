@@ -71,14 +71,55 @@ iris %>%
 
 ### Plots
 
+
+#### GGPlot2
+
+*Scatter*
+```{r, include = TRUE}
+scatter <- ggplot(data=iris, aes(x = Sepal.Length, y = Sepal.Width)) 
+scatter + geom_point(aes(color=Species, shape=Species)) +
+  xlab("Sepal Length") +  ylab("Sepal Width") +
+  ggtitle("Sepal Length-Width")
+```
+
+
+*Boxplot*
+
+```{r, include = TRUE}
+box <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
+box + geom_boxplot(aes(fill=Species)) + 
+  ylab("Sepal Length") + ggtitle("Iris Boxplot") +
+  stat_summary(fun.y=mean, geom="point", shape=5, size=4) 
+```
+
+*Facets*
+```{r, include = TRUE}
+facet <- ggplot(data=iris, aes(Sepal.Length, y=Sepal.Width, color=Species)) + 
+  geom_point(aes(shape=Species), size=1.5) + geom_smooth(method="lm") +
+  xlab("Sepal Length") + ylab("Sepal Width") + ggtitle("Faceting")
+
+# Along rows
+facet + facet_grid(. ~ Species)
+```
+
 </br>
+
+### Plotly
+```{r, include = TRUE}
+plot_ly(iris, x=iris$Petal.Length, y=iris$Sepal.Length, 
+        mode = "markers", color = iris$Species) %>%
+     layout(xaxis=list(title ='Petal Length', range = c(0, 7)), 
+            yaxis=list(title ='Sepal.Length', range = c(4, 8)),
+            title = 'Graph of Iris Dataset')
+```
 
 
 ## APPENDIX
 
 ### Resources
 
-* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target - "_blank"}
-* [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook){target - "_blank"}
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target = "_blank"}
+* [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook){target = "_blank"}
 * [Interactive Documents](https://garrettgman.github.io/rmarkdown/authoring_shiny.html#overview){target - "_blank"}
-* [R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/){target - "_blank"}
+* [Plotly-R](https://plotly-r.com/){target = "_blank"}
+* [R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/){target = "_blank"}
