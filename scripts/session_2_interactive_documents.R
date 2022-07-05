@@ -1,13 +1,18 @@
 ## Session 2: Interactive Documents - Rmarkdown, Flexdashboard, Shiny
-## Date: July 1, 2022
+## Date: July 5, 2022
 
 #### Parameters in Rmarkdown ----
 
+## Source: https://bookdown.org/yihui/rmarkdown/parameterized-reports.html
+
+## See: General QA Report: K:\CD and ORPHEUS\Orpheus_exports_\COVID EXPORTS\Data Quality Project\Case-Data-Cleaning-2022\report_templates\General QA_Parametrized.Rmd
 
 
 #### Flexdashboard ----
 
 ## Source: https://pkgs.rstudio.com/flexdashboard/
+
+## See: COVID Metrics: K:\CD and ORPHEUS\Orpheus_exports_\COVID EXPORTS\Data Requests and Tasks\COVID-Metrics\COVID-Metrics\outputs\reports\Versioning\COVID Metrics Report - 06292022.html
 
 ## install
 install.packages("flexdashboard")
